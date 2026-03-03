@@ -7,8 +7,8 @@ def recommend_by_interest(user_id, user_cache, adj_list, top_k=3):
     my_friends = set(adj_list.get_neighbors(user_id))
 
     recommendations = []
-    # 遍历所有用户（这里简单处理，实际可用哈希表优化）
-    # 假设我们能获取所有 ID，这里演示逻辑
+    # 遍历所有用户
+    # 假设我们能获取所有 ID
     for other_id in range(1, 100):  # 示例范围
         oid = str(other_id)
         if oid == user_id or oid in my_friends: continue

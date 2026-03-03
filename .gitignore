@@ -1,23 +1,24 @@
-# # --- Python 虚拟环境 (最重要，防止上传 lib 和 scripts) ---
-  #.venv/
-  #venv/
-  #ENV/
-  #env/
-  #
-  ## --- Python 运行产生的缓存 ---
-  #__pycache__/
-  #*.pyc
-  #*.pyo
-  #*.pyd
-  #
-  ## --- IDE (PyCharm) 配置文件 ---
-  #.idea/
-  #.vscode/
-  #
-  ## --- 操作系统临时文件 ---
-  #.DS_Store
-  #Thumbs.db
-  #
-  ## --- 本地测试产生的数据或日志 (可选) ---
-  #*.logcreated by virtualenv automatically
-.venv/Lib
+# --- 1. 虚拟环境（必须忽略，文件多且体积大） ---
+.venv/
+venv/
+ENV/
+env/
+
+# --- 2. PyCharm 配置
+.idea/
+.vscode/
+*.iml
+
+# --- 3. Python 自动生成的缓存（避免代码冲突） ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- 4. 操作系统产生的垃圾文件 ---
+.DS_Store
+Thumbs.db
+
+# --- 5. 本地数据与日志
+# data/*.csv
+# data/*.txt
+*.log
